@@ -250,7 +250,7 @@ namespace FlightProcessor.EXLogic {
       bool _IsInAltitudeLimit = true;
 
       GPSPoint ThisPosition = new GPSPoint((float)_FlightMapData.Latitude, (float)_FlightMapData.Longitude);
-      FlightApproval Approval = GetAppoval(ThisPosition);
+      FlightApproval Approval = GetApproval(ThisPosition);
       
       if (Approval != null) {
         _Approval = Approval;
@@ -370,8 +370,6 @@ namespace FlightProcessor.EXLogic {
 
       return true;
     }
-
-
 
 
     public async Task<DroneFlight> GenerateFlight() {
@@ -498,7 +496,7 @@ namespace FlightProcessor.EXLogic {
       return _DroneFlight;
     }
 
-    private FlightApproval GetAppoval(GPSPoint ThisPosition) {
+    private FlightApproval GetApproval(GPSPoint ThisPosition) {
       foreach(FlightApproval Approval in FlightApprovals) {
         if (Approval.IsInBoundary(ThisPosition))
           return Approval;
