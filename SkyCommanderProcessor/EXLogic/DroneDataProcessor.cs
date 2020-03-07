@@ -128,18 +128,29 @@ namespace SkyCommanderProcessor.EXLogic {
     }
 
     public async Task<bool> UpdateFlightSummary() {
-      Exponent.WeatherAPI weather = new Exponent.WeatherAPI();
-      var CurrentCondition = weather.GetByLocation((Double)_FlightMapData.Latitude, (Double)_FlightMapData.Longitude);
+     // just-for-test  Exponent.WeatherAPI weather = new Exponent.WeatherAPI();
+     // just-for-test  var CurrentCondition = weather.GetByLocation((Double)_FlightMapData.Latitude, (Double)_FlightMapData.Longitude);
 
       var flightInfo = new Models.FlightInfo {
         FlightID = _FlightID,
-        Condition = CurrentCondition.Today.ConditionText,
-        WindSpeed = CurrentCondition.Today.WindSpeed.ToString(),
-        Humidity = CurrentCondition.Today.Humidity.ToString(),
-        Visibility = (Decimal)CurrentCondition.Today.Visibility,
-        Pressure = (Decimal)CurrentCondition.Today.Pressure,
-        Temperature = CurrentCondition.Today.Temperature.ToString(),
-        Wind = CurrentCondition.Today.WindDirection.ToString(),
+        // just-for-test  Condition = CurrentCondition.Today.ConditionText,
+        // just-for-test  WindSpeed = CurrentCondition.Today.WindSpeed.ToString(),
+        // just-for-test  Humidity = CurrentCondition.Today.Humidity.ToString(),
+        // just-for-test  Visibility = (Decimal)CurrentCondition.Today.Visibility,
+        // just-for-test  Pressure = (Decimal)CurrentCondition.Today.Pressure,
+        // just-for-test  Temperature = CurrentCondition.Today.Temperature.ToString(),
+        // just-for-test  Wind = CurrentCondition.Today.WindDirection.ToString(),
+        
+        
+        Condition = "1",// just-for-test  
+        WindSpeed = "2",// just-for-test  
+        Humidity = "3",// just-for-test  
+        Visibility = 4,// just-for-test  
+        Pressure = 5,// just-for-test  
+        Temperature = "6",// just-for-test  
+        Wind = "7", // just-for-test         
+        
+        
         MaxAltiude = (Decimal)AltitudeSummary.Max,
         MinAltitude = (Decimal)AltitudeSummary.Min,
         AvgAltitude = (Decimal)AltitudeSummary.Avg,
