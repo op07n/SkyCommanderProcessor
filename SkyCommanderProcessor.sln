@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceGrid", "SourceGrid\So
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyCommanderProcessor", "SkyCommanderProcessor\SkyCommanderProcessor.csproj", "{24E2C9CD-076F-49CC-9F2D-AE776217AAC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAPI", "..\..\Web\eX-Portal\eX-Portal\eX-Portal\WeatherAPI\WeatherAPI.csproj", "{BFAF2D75-0AFF-4DFB-AB56-23FCC4070F60}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
